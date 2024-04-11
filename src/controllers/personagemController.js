@@ -29,7 +29,7 @@ class PersonagemController {
     static async deletaPersonagem(req, res){
         const id = req.params.id
         await personagem.findByIdAndDelete(id)
-        res.status(200).json({message: "Personagem Excluído Com Sucesso"})
+        res.status(200).json({message: "Personagem Excluído"})
     }
 
 }
