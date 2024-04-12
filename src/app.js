@@ -1,6 +1,5 @@
 import express from "express"
 import conectaDataBase from "./config/conections.js"
-import mongoose from "mongoose"
 import routes from "./routes/index.js"
 
 
