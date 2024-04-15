@@ -2,7 +2,7 @@ import mongoose, { mongo } from "mongoose";
 
 const personagemSchema = new mongoose.Schema({
     id: {type: mongoose.Schema.Types.ObjectId},
-    realName: {type: String, Required: true},
+    realName: {type: String, required: [true, "O nome Real é obrigatório"]},
     nickname: {type: String},
     description: {type: String}
 

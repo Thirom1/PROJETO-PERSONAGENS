@@ -1,6 +1,7 @@
 import express from "express"
 import conectaDataBase from "./config/conections.js"
 import routes from "./routes/index.js"
+import trataError from "./middlewears/trataError.js"
 
 
 const conecta = await conectaDataBase()
@@ -16,5 +17,6 @@ conecta.once("open", () => {
  
 
 routes(app)
+app.use(trataError)
 
 export default app
